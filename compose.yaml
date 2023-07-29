@@ -1,0 +1,10 @@
+services:
+  klipper-linux:
+    image: klipper-ubuntu
+    command: /sbin/init
+    privileged: true
+    ports:
+      - 80:80
+      - 7125:7125
+    tty: true
+    #user: "1000:1000"
