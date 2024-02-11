@@ -1,6 +1,9 @@
+version: "3"
 services:
-  klipper-linux:
-    image: klipper-ubuntu
+  klipper-ubuntu:
+    container_name: klipper-ubuntu
+    build:
+      context: .
     command: /bin/bash
     privileged: true
     ports:

@@ -1,5 +1,19 @@
 # Klipperのシミュレーション用Dokcer環境
 
+## 環境構築
+1. `docker-compose up`
+2. `docker.exe exec -it -u user klipper-ubuntu /bin/bash`
+3. `./kiauh/kiauh.sh`でklipper, moonraker, fluiddなどの環境をインストール
+4. `sh run_simulavr.sh`
+
+## 次回以降の開始
+1. `docker-compose start`
+2. `docker-compose exec -u user klipper-ubuntu /home/user/run_simulavr.sh`
+
+
+
+# Old
+
 ## 環境構築の流れ
 `docker image build -t klipper-ubuntu`
 
