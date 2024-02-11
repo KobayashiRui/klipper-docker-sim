@@ -15,5 +15,13 @@ RUN groupadd -g $GID $GROUPNAME && \
     echo $USERNAME:$PASSWORD | chpasswd && \
     echo "$USERNAME   ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 #USER $USERNAME
-#WORKDIR /home/$USERNAME/
+WORKDIR /home/$USERNAME/
+RUN apt-get install g++ make cmake swig rst2pdf help2man texinfo
+RUN make cfgclean python debian
+RUN sudo dpkg -i build/debian/python3-simulavr*.deb
+
+
+
+
+
 CMD ["/sbin/init"]
