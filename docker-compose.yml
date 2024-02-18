@@ -4,7 +4,7 @@ services:
     container_name: klipper-ubuntu
     build:
       context: .
-    command: /bin/bash
+    command: /sbin/init
     privileged: true
     ports:
       - 80:80
